@@ -15,6 +15,7 @@ const port = 8080
 func main() {
 	logger := log.New(os.Stdout, "DEBUG: ", log.Lshortfile)
 
+	// the url that we use as fallback api
 	fallbackURL, err := url.Parse("https://www.googleapis.com/")
 	if err != nil {
 		logger.Fatal(err)
