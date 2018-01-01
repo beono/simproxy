@@ -28,6 +28,10 @@ func main() {
 	serverMux.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
 		logger.Printf("request to: %s", "404")
 		writer.Header().Add("x-proxy", "true")
+		// It's important to set `Host` header.
+		// It's not done automatically.
+		// Though the documentation of `NewSingleHostReverseProxy` suggest a different solution,
+		// I decided to rewrite it here, 'cause it's the absolutely same but more concise.
 		request.Host = fallbackURL.Host
 		revProxy.ServeHTTP(writer, request)
 	})
