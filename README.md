@@ -13,8 +13,8 @@ I just want to show that you don't have to use `nginx` or write your own proxy s
 # How to use it
 The solution is quite simple and straightforward.
 We use [reverse proxy](https://golang.org/pkg/net/http/httputil/#NewSingleHostReverseProxy) and http server from the standard library.
-Just clone or `go get -u github.com/beono/simproxy` this project.
-Run `go test && go run main.go` to see it in action.
+* Clone or `go get -u github.com/beono/simproxy` this project.
+* Run `go test && go run main.go` to see it in action.
 
 Send a request to http://localhost/hello and you will get a tiny text response.
 
