@@ -32,7 +32,7 @@ func main() {
 		// It's important to set `Host` header.
 		// It's not done automatically.
 		// Though the documentation of `NewSingleHostReverseProxy` suggest a different solution,
-		// I decided to rewrite it here, 'cause it's the absolutely same but more concise.
+		// I decided to rewrite it here, because it's absolutely the same but more concise.
 		request.Host = fallbackURL.Host
 		revProxy.ServeHTTP(writer, request)
 	})
