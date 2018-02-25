@@ -6,9 +6,9 @@
 The project is an example of an application that uses reverse proxy from the standartd library.
 
 # Why
-Let's assume you want to migrate your api that from language X to golang.
+Let's assume you want to migrate your api from language X to golang.
 Sometimes it's hard to rewrite everything at once and you want to move some handlers to golang, but use old application as a fallback.
-I just want to show that you don't have to use `nginx` or write your own proxy server based of standard http client.
+I just want to show you that you don't have to use any 3rd-party proxies (like `nginx`) or write your own proxy logic.
 
 # How to use it
 The solution is quite simple and straightforward.
